@@ -118,7 +118,7 @@ export const ContactSection: React.FC = () => {
           {/* Right Column: Interactive Form */}
           <div className="lg:col-span-7">
             <SectionReveal delay={200}>
-              <div className="relative rounded-3xl p-8 sm:p-10 bg-[#0d0d12]/80 border border-white/[0.1] backdrop-blur-2xl shadow-2xl">
+              <div className="contact-form-shell relative rounded-3xl p-8 sm:p-10 bg-[#0d0d12]/80 border border-white/[0.1] backdrop-blur-2xl shadow-2xl">
                 {/* Visual Radiant Accent in top-right corner of card */}
                 <div className="absolute top-6 right-6">
                   <StarParticle size="md" isHovered={true} glowColor="rgba(168, 85, 247, 0.7)" />
@@ -170,7 +170,7 @@ export const ContactSection: React.FC = () => {
                           value={formData.name}
                           onChange={(e) => setFormData({ ...formData, name: e.target.value })}
                           placeholder="e.g. Elena Rostova"
-                          className={`w-full px-4 py-3.5 rounded-xl bg-white/[0.03] text-white text-sm border focus:outline-none transition-all placeholder:text-zinc-600 ${
+                          className={`contact-field w-full px-4 py-3.5 rounded-xl bg-white/[0.03] text-white text-sm border focus:outline-none transition-all placeholder:text-zinc-600 ${
                             formErrors.name
                               ? 'border-red-500/60 focus:border-red-500'
                               : 'border-white/[0.08] focus:border-purple-500/60 focus:bg-white/[0.05]'
@@ -198,7 +198,7 @@ export const ContactSection: React.FC = () => {
                           value={formData.email}
                           onChange={(e) => setFormData({ ...formData, email: e.target.value })}
                           placeholder="elena@example.com"
-                          className={`w-full px-4 py-3.5 rounded-xl bg-white/[0.03] text-white text-sm border focus:outline-none transition-all placeholder:text-zinc-600 ${
+                          className={`contact-field w-full px-4 py-3.5 rounded-xl bg-white/[0.03] text-white text-sm border focus:outline-none transition-all placeholder:text-zinc-600 ${
                             formErrors.email
                               ? 'border-red-500/60 focus:border-red-500'
                               : 'border-white/[0.08] focus:border-purple-500/60 focus:bg-white/[0.05]'
@@ -227,7 +227,7 @@ export const ContactSection: React.FC = () => {
                         value={formData.subject}
                         onChange={(e) => setFormData({ ...formData, subject: e.target.value })}
                         placeholder="e.g. Brand New Digital Product & Architecture"
-                        className={`w-full px-4 py-3.5 rounded-xl bg-white/[0.03] text-white text-sm border focus:outline-none transition-all placeholder:text-zinc-600 ${
+                        className={`contact-field w-full px-4 py-3.5 rounded-xl bg-white/[0.03] text-white text-sm border focus:outline-none transition-all placeholder:text-zinc-600 ${
                           formErrors.subject
                             ? 'border-red-500/60 focus:border-red-500'
                             : 'border-white/[0.08] focus:border-purple-500/60 focus:bg-white/[0.05]'
@@ -255,7 +255,7 @@ export const ContactSection: React.FC = () => {
                         value={formData.message}
                         onChange={(e) => setFormData({ ...formData, message: e.target.value })}
                         placeholder="Tell us about your project vision, timeline, and goals..."
-                        className={`w-full px-4 py-3.5 rounded-xl bg-white/[0.03] text-white text-sm border focus:outline-none transition-all placeholder:text-zinc-600 resize-none ${
+                        className={`contact-field w-full px-4 py-3.5 rounded-xl bg-white/[0.03] text-white text-sm border focus:outline-none transition-all placeholder:text-zinc-600 resize-none ${
                           formErrors.message
                             ? 'border-red-500/60 focus:border-red-500'
                             : 'border-white/[0.08] focus:border-purple-500/60 focus:bg-white/[0.05]'
@@ -273,7 +273,7 @@ export const ContactSection: React.FC = () => {
                     <button
                       type="submit"
                       disabled={isSubmitting}
-                      className="w-full relative group inline-flex items-center justify-center gap-2.5 px-8 py-4 rounded-xl text-sm font-semibold tracking-wide text-white bg-gradient-to-r from-purple-600 to-indigo-600 hover:from-purple-500 hover:to-indigo-500 transition-all duration-300 shadow-[0_0_30px_rgba(168,85,247,0.35)] hover:shadow-[0_0_40px_rgba(168,85,247,0.6)] disabled:opacity-50"
+                      className="contact-submit w-full relative group inline-flex items-center justify-center gap-2.5 px-8 py-4 rounded-xl text-sm font-semibold tracking-wide text-white bg-gradient-to-r from-purple-600 to-indigo-600 hover:from-purple-500 hover:to-indigo-500 transition-all duration-300 shadow-[0_0_30px_rgba(168,85,247,0.35)] hover:shadow-[0_0_40px_rgba(168,85,247,0.6)] disabled:opacity-50"
                     >
                       <Send className="w-4 h-4 transition-transform duration-300 group-hover:translate-x-1" />
                       <span>{isSubmitting ? 'Validating...' : 'Send Message'}</span>

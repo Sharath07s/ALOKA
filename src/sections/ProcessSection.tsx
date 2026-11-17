@@ -120,7 +120,7 @@ export const ProcessSection: React.FC = () => {
 
                   {/* Step Card Content */}
                   <div
-                    className={`w-full rounded-2xl p-6 transition-all duration-500 border text-left ${
+                    className={`process-step-panel w-full rounded-2xl p-6 transition-all duration-500 border text-left ${
                       isActive
                         ? 'bg-[#13111b]/80 border-purple-500/40 shadow-[0_12px_35px_-10px_rgba(168,85,247,0.25)] -translate-y-1'
                         : 'bg-[#0a0a0d]/50 border-white/[0.06] hover:bg-[#100f17]/60 hover:border-white/[0.12]'
@@ -163,7 +163,7 @@ export const ProcessSection: React.FC = () => {
               <div
                 key={step.number}
                 onClick={() => setActiveStep(idx)}
-                className={`relative rounded-2xl p-6 transition-all duration-300 border ${
+                className={`process-step-mobile relative rounded-2xl p-6 transition-all duration-300 border ${
                   isActive
                     ? 'bg-[#13111b]/90 border-purple-500/50 shadow-[0_8px_30px_rgba(168,85,247,0.2)]'
                     : 'bg-[#0a0a0d]/70 border-white/[0.08]'

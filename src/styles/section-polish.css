@@ -1,0 +1,253 @@
+#services,
+#about,
+#process,
+#work,
+#insights,
+#contact {
+  position: relative;
+  isolation: isolate;
+  overflow-x: clip;
+}
+
+#services::before,
+#about::before,
+#process::before,
+#work::before,
+#insights::before,
+#contact::before {
+  position: absolute;
+  top: 0;
+  right: max(24px, 6vw);
+  left: max(24px, 6vw);
+  height: 1px;
+  background: linear-gradient(90deg, transparent, rgba(212, 190, 255, 0.18), transparent);
+  content: '';
+  pointer-events: none;
+}
+
+#services .section-editorial-header,
+#work .section-editorial-header,
+#insights .section-editorial-header {
+  position: relative;
+  padding-bottom: clamp(24px, 4vw, 42px);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.09);
+}
+
+#services .section-editorial-header h2,
+#work .section-editorial-header h2,
+#insights .section-editorial-header h2 {
+  max-width: 13ch;
+  font-size: clamp(42px, 5.3vw, 72px);
+  line-height: 1.04;
+  letter-spacing: -0.045em;
+}
+
+#services .section-editorial-copy,
+#work .section-editorial-copy,
+#insights .section-editorial-copy {
+  max-width: 42ch;
+  margin: 0 0 6px auto;
+  color: #a1a1aa;
+  font-size: clamp(16px, 1.35vw, 19px);
+  line-height: 1.75;
+}
+
+#services .services-grid > div {
+  height: 100%;
+}
+
+#services .service-card-shell {
+  position: relative;
+  height: 100%;
+  min-height: 420px;
+  border-radius: 24px;
+  background:
+    radial-gradient(ellipse at 100% 0%, rgba(128, 77, 205, 0.1), transparent 42%),
+    linear-gradient(155deg, rgba(18, 17, 24, 0.94), rgba(8, 8, 11, 0.96));
+  box-shadow: inset 0 1px rgba(255, 255, 255, 0.035);
+}
+
+#services .service-card-shell::before,
+#work .project-card-shell::before,
+#insights .insight-card-shell::before {
+  position: absolute;
+  top: 0;
+  right: 24px;
+  left: 24px;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, rgba(209, 184, 255, 0.44), transparent);
+  content: '';
+  opacity: 0.5;
+  transition: opacity 250ms ease;
+}
+
+#services .service-card-shell:hover::before,
+#work .project-card-shell:hover::before,
+#insights .insight-card-shell:hover::before {
+  opacity: 1;
+}
+
+#services .service-card-shell::after {
+  position: absolute;
+  top: -90px;
+  right: -90px;
+  width: 220px;
+  height: 220px;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(168, 85, 247, 0.1), transparent 70%);
+  content: '';
+  opacity: 0.5;
+  pointer-events: none;
+  transition: opacity 350ms ease, transform 500ms ease;
+}
+
+#services .service-card-shell:hover::after {
+  transform: scale(1.25);
+  opacity: 1;
+}
+
+#services .service-card-shell > div,
+#services .service-card-shell a {
+  position: relative;
+  z-index: 1;
+}
+
+#about .about-pillar-card {
+  border-radius: 20px;
+  background:
+    linear-gradient(110deg, rgba(168, 85, 247, 0.055), transparent 38%),
+    rgba(13, 13, 18, 0.76);
+  box-shadow: inset 0 1px rgba(255, 255, 255, 0.04);
+}
+
+#about .about-pillar-card::before {
+  position: absolute;
+  top: 22px;
+  bottom: 22px;
+  left: 0;
+  width: 2px;
+  border-radius: 2px;
+  background: linear-gradient(180deg, rgba(192, 132, 252, 0.8), transparent);
+  content: '';
+  opacity: 0.35;
+  transition: opacity 250ms ease;
+}
+
+#about .about-pillar-card:hover::before {
+  opacity: 1;
+}
+
+#process .process-step-panel,
+#process .process-step-mobile {
+  backdrop-filter: blur(18px);
+  box-shadow: inset 0 1px rgba(255, 255, 255, 0.035);
+}
+
+#process .process-step-panel:hover,
+#process .process-step-mobile:hover {
+  border-color: rgba(192, 132, 252, 0.38);
+}
+
+#work .project-card-shell {
+  position: relative;
+  border-radius: 25px;
+  background: linear-gradient(150deg, rgba(17, 16, 23, 0.98), rgba(7, 7, 10, 0.98));
+  box-shadow: inset 0 1px rgba(255, 255, 255, 0.04);
+}
+
+#work .project-card-art {
+  background-image:
+    radial-gradient(ellipse at 50% 45%, rgba(114, 75, 171, 0.12), transparent 55%),
+    linear-gradient(145deg, #0d0d11, #08080b 72%);
+}
+
+#work .project-card-orbit {
+  filter: drop-shadow(0 0 22px rgba(168, 85, 247, 0.12));
+}
+
+#work .project-card-shell:hover .project-card-orbit {
+  filter: drop-shadow(0 0 34px rgba(168, 85, 247, 0.3));
+}
+
+#insights .insight-card-shell {
+  position: relative;
+  overflow: hidden;
+  min-height: 350px;
+  border-radius: 22px;
+  background:
+    radial-gradient(ellipse at 100% 0%, rgba(88, 75, 134, 0.12), transparent 45%),
+    linear-gradient(150deg, rgba(17, 16, 23, 0.92), rgba(8, 8, 11, 0.97));
+  box-shadow: inset 0 1px rgba(255, 255, 255, 0.035);
+}
+
+#insights .insight-card-shell h3 {
+  font-size: clamp(20px, 1.8vw, 24px);
+  line-height: 1.25;
+}
+
+#contact .contact-form-shell {
+  border-radius: 24px;
+  background:
+    radial-gradient(ellipse at 100% 0%, rgba(127, 78, 195, 0.1), transparent 40%),
+    rgba(12, 12, 17, 0.9);
+  box-shadow:
+    0 28px 90px -50px rgba(132, 84, 204, 0.45),
+    inset 0 1px rgba(255, 255, 255, 0.045);
+}
+
+#contact .contact-field {
+  border-radius: 12px;
+  background-color: rgba(255, 255, 255, 0.035);
+  transition: border-color 180ms ease, background-color 180ms ease, box-shadow 180ms ease;
+}
+
+#contact .contact-field:focus {
+  box-shadow: 0 0 0 3px rgba(168, 85, 247, 0.12);
+}
+
+#contact .contact-submit {
+  min-height: 54px;
+  border-radius: 14px;
+  letter-spacing: 0.04em;
+}
+
+#contact .contact-submit:hover:not(:disabled) {
+  transform: translateY(-2px);
+}
+
+@media (max-width: 1023px) {
+  #services .section-editorial-header h2,
+  #work .section-editorial-header h2,
+  #insights .section-editorial-header h2 {
+    max-width: 16ch;
+  }
+
+  #services .section-editorial-copy,
+  #work .section-editorial-copy,
+  #insights .section-editorial-copy {
+    margin: 0;
+  }
+}
+
+@media (max-width: 640px) {
+  #services .service-card-shell {
+    min-height: 0;
+  }
+
+  #insights .insight-card-shell {
+    min-height: 0;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  #services .service-card-shell::before,
+  #services .service-card-shell::after,
+  #about .about-pillar-card::before,
+  #work .project-card-shell::before,
+  #work .project-card-orbit,
+  #insights .insight-card-shell::before,
+  #contact .contact-field,
+  #contact .contact-submit {
+    transition: none;
+  }
+}

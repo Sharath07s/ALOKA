@@ -14,16 +14,16 @@ export const ProjectCard: React.FC<ProjectCardProps> = ({ project }) => {
     <div
       onMouseEnter={() => setIsHovered(true)}
       onMouseLeave={() => setIsHovered(false)}
-      className="group relative rounded-3xl overflow-hidden bg-[#0c0c10]/80 border border-white/[0.08] hover:border-purple-500/50 transition-all duration-500 flex flex-col justify-between hover:shadow-[0_20px_50px_-15px_rgba(168,85,247,0.25)] hover:-translate-y-1.5"
+      className="project-card-shell group relative rounded-3xl overflow-hidden bg-[#0c0c10]/80 border border-white/[0.08] hover:border-purple-500/50 transition-all duration-500 flex flex-col justify-between hover:shadow-[0_20px_50px_-15px_rgba(168,85,247,0.25)] hover:-translate-y-1.5"
     >
       {/* Visual Canvas / Abstract Luminous Media Container */}
-      <div className="relative h-60 sm:h-72 w-full overflow-hidden bg-gradient-to-br from-black via-zinc-950 to-[#0e0a17] flex items-center justify-center p-8">
+      <div className="project-card-art relative h-60 sm:h-72 w-full overflow-hidden bg-gradient-to-br from-black via-zinc-950 to-[#0e0a17] flex items-center justify-center p-8">
         {/* Subtle grid pattern */}
         <div className="absolute inset-0 bg-[linear-gradient(to_right,rgba(255,255,255,0.03)_1px,transparent_1px),linear-gradient(to_bottom,rgba(255,255,255,0.03)_1px,transparent_1px)] bg-[size:28px_28px] opacity-40" />
 
         {/* Abstract Generative Cosmic Geometry */}
         <div
-          className={`relative w-44 h-44 rounded-full flex items-center justify-center transition-all duration-700 ease-out ${
+          className={`project-card-orbit relative w-44 h-44 rounded-full flex items-center justify-center transition-all duration-700 ease-out ${
             isHovered ? 'scale-110 rotate-12' : 'scale-100 rotate-0'
           }`}
         >

@@ -45,7 +45,7 @@ export const ServiceCard: React.FC<ServiceCardProps> = ({ service }) => {
       onMouseMove={handleMouseMove}
       onMouseEnter={handleMouseEnter}
       onMouseLeave={handleMouseLeave}
-      className={`group relative rounded-3xl p-8 transition-all duration-500 ease-out flex flex-col justify-between overflow-hidden ${
+      className={`service-card-shell group relative rounded-3xl p-8 transition-all duration-500 ease-out flex flex-col justify-between overflow-hidden ${
         isDirectHover
           ? 'bg-[#121118]/85 -translate-y-2 shadow-[0_20px_50px_-15px_rgba(168,85,247,0.22)]'
           : 'bg-[#0d0d10]/60 hover:bg-[#111116]/80'

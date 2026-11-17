@@ -84,7 +84,7 @@ export const AboutSection: React.FC = () => {
               const Icon = pillar.icon;
               return (
                 <SectionReveal key={pillar.title} delay={i * 150}>
-                  <div className="group relative rounded-2xl p-6 sm:p-8 bg-[#0e0e13]/60 hover:bg-[#14121c]/80 border border-white/[0.08] hover:border-purple-500/40 backdrop-blur-xl transition-all duration-500 hover:-translate-y-1 hover:shadow-[0_15px_40px_-10px_rgba(168,85,247,0.2)]">
+                  <div className="about-pillar-card group relative rounded-2xl p-6 sm:p-8 bg-[#0e0e13]/60 hover:bg-[#14121c]/80 border border-white/[0.08] hover:border-purple-500/40 backdrop-blur-xl transition-all duration-500 hover:-translate-y-1 hover:shadow-[0_15px_40px_-10px_rgba(168,85,247,0.2)]">
                     <div className="flex items-start gap-5">
                       <div className="w-12 h-12 rounded-2xl bg-purple-900/30 border border-purple-500/20 flex items-center justify-center shrink-0 group-hover:bg-purple-600/30 group-hover:border-purple-400/50 transition-all duration-300 group-hover:scale-110">
                         <Icon className="w-6 h-6 text-purple-300 group-hover:text-white transition-colors" />

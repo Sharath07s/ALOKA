@@ -17,19 +17,21 @@ export const WorkSection: React.FC = () => {
 
       <div className="max-w-7xl mx-auto">
         {/* Header */}
-        <SectionReveal className="flex flex-col items-center text-center mb-20">
-          <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-white/[0.04] border border-white/[0.1] backdrop-blur-md mb-4">
-            <StarParticle size="sm" isHovered={true} glowColor="#a855f7" />
-            <span className="text-xs font-mono tracking-widest text-purple-300 uppercase">
-              SELECTED PROJECTS
-            </span>
+        <SectionReveal className="section-editorial-header grid grid-cols-1 lg:grid-cols-[1.05fr_.95fr] items-end gap-8 mb-14 md:mb-20">
+          <div>
+            <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-white/[0.04] border border-white/[0.1] backdrop-blur-md mb-5">
+              <StarParticle size="sm" isHovered={true} glowColor="#a855f7" />
+              <span className="text-xs font-mono tracking-widest text-purple-300 uppercase">
+                SELECTED PROJECTS
+              </span>
+            </div>
+
+            <h2 className="text-3xl sm:text-5xl md:text-6xl font-normal text-white tracking-tight">
+              Ideas brought <span className="font-display italic font-semibold text-transparent bg-clip-text bg-gradient-to-r from-purple-200 via-white to-purple-400">to life</span>.
+            </h2>
           </div>
 
-          <h2 className="text-3xl sm:text-5xl md:text-6xl font-normal text-white tracking-tight mb-6">
-            Ideas brought <span className="font-display italic font-semibold text-transparent bg-clip-text bg-gradient-to-r from-purple-200 via-white to-purple-400">to life</span>.
-          </h2>
-
-          <p className="text-base sm:text-lg text-zinc-400 max-w-2xl font-light">
+          <p className="section-editorial-copy text-base sm:text-lg text-zinc-400 max-w-2xl font-light">
             A curated collection of digital artifacts, intelligent interfaces, and software architectures designed to endure.
           </p>
         </SectionReveal>
